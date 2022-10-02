@@ -2,8 +2,28 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "bootstrap": "^5.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
     "jquery": "^3.6.1",
     "node": "^18.9.1",
+    "nodemon": "^2.0.20",
     "parse": "^3.4.4"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "1-ajax",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnKimaiyo/ajax_fetch_api_project_1.git"
+  },
+  "author": "john kimaiyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnKimaiyo/ajax_fetch_api_project_1/issues"
+  },
+  "homepage": "https://github.com/JohnKimaiyo/ajax_fetch_api_project_1#readme",
+  "description": ""
 }

@@ -69,16 +69,16 @@ apiButton.addEventListener('click', function () {
 })
 
 // display users
-let displayUsers = (users) =>{
+let displayUsers = (users) => {
     let htmlTemplate = '';
     htmlTemplate = '';
-    for(let user of users){
+    for (let user of users) {
         htmlTemplate += `<ul class="list-group">
-                        <li class = ="list-group-item"> ID : ${user.id}</li>
-                        <li class = ="list-group-item"> ID : ${user.name}</li>
-                        <li class = ="list-group-item"> ID : ${user.email}</li>
-                        <li class = ="list-group-item"> ID : ${user.address.street}</li>
-                        <li class = ="list-group-item"> ID : ${user.address.city}</li>
+                        <li class  ="list-group-item"> ID : ${user.id}</li>
+                        <li class ="list-group-item"> ID : ${user.name}</li>
+                        <li class  ="list-group-item"> ID : ${user.email}</li>
+                        <li class ="list-group-item"> ID : ${user.address.street}</li>
+                        <li class  ="list-group-item"> ID : ${user.address.city}</li>
                         </ul>`;
     }
     document.querySelector('#api-card').innerHTML = htmlTemplate;

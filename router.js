@@ -12,7 +12,7 @@ let employees = [
         ip_address: '127.0.0.1'
     },
     {
-        id: '_a',
+        id: '_b',
         first_name: 'janet',
         last_name: 'Wilson',
         email: 'janet@gmail.com',
@@ -64,11 +64,11 @@ router.put('/employees/:id', (request, response) => {
 
 });
 
-// DELET REQUEST
-Router.delete('/employees/:id',(request,response)=>{
+// DELETE REQUEST
+router.delete('/employees/:id', (request, response) => {
     let empId = request.params.id;
-    employees = employees.filter((employee)=>{
-return employee.id !== empId;
+    employees = employees.filter((employee) => {
+        return employee.id !== empId;
     });
     console.log(`delete Request Recived at server .. ${new Date().toLocaleTimeString()}`);
     response.json({ msg: 'delete Request is success' });

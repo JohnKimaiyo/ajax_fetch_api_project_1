@@ -9,7 +9,7 @@ export class brainhttp {
         this.http.send();
         this.http.onload = () => {
             if (this.http.status === 200) {
-                let data = this.http.reposnseText;
+                let data = this.http.responseText;
                 let employees = JSON.parse(data)
                 callback(users);
             }
@@ -25,6 +25,30 @@ post = (url, employees, callback) => {
     this.http.open('POST', url, true);
     this.http.setRequestHeader('content-Type', 'application/json');
     this.http.send(JSON.stringify(employees));
+    this.http.onload = () => {
+        let data = this.http.responseText;
+        let employees = JSON.parse(data)
+        callback(employees);
+    }
+}
+
+// put request
+put = (url, employees, callback) => {
+    this.http.open('PUT', url, true);
+    this.http.setRequestHeader('content-Type', 'application/json');
+    this.http.send(JSON.stringify(employees));
+    this.http.onload = () => {
+        let data = this.http.responseText;
+        let employees = JSON.parse(data)
+        callback(employees);
+    }
+}
+
+// DELETE  REQUEST
+delet = (url, callback) => {
+    this.http.open('DELETE', url, true);
+    this.http.setRequestHeader('content-Type', 'application/json');
+    this.http.send();
     this.http.onload = () => {
         let data = this.http.responseText;
         let employees = JSON.parse(data)
